@@ -1,0 +1,38 @@
+mysql database testing
+
+install mysql community edition
+inside program files one folder create named myysql -> go to that -> run mysql exe file-> click default server-> give root password-> now connected to server and you can execute queries in editor
+ 
+//for creating database
+create database Haema;
+//telling that u are going to use in haema database
+use Haema;
+//creating table in haema database
+create table employeeinfo(name varchar(20),id int,location varchar(20),age int);
+//viewing details in employeeinfo table
+describe employeeinfo;
+//adding rows
+insert into employeeinfo values('sedhu',456,'reddiarpalayam',19);
+describe employeeinfo;
+insert into employeeinfo values('madhava',456,'reddiarpalayam',19);
+insert into employeeinfo values('shiv',456,'reddiarpalayam',19);
+insert into employeeinfo values('reo',456,'reddiarpalayam',19);
+insert into employeeinfo values('jawahar',456,'reddiarpalayam',19);
+
+//select name,id,location,age from employeeinfo;(getting all like * used below)
+//selecting everything from employeeinfo
+select* from employeeinfo;
+//asking the row which has name sedhu( see intellij project )
+select * from employeeinfo where name ="sedhu";
+insert into employeeinfo values('jawahar',456,'mangalam',19);
+
+//unique names in employeeinfo;
+select distinct name from employeeinfo;
+select name from employeeinfo where location = "mangalam" and age>45; // it should satisfy both condition
+select name from employeeinfo where (location = "mangalam" and age>45) or age=34 ;//or operator this or that
+select name from employeeinfo where age in(19,34); // it will print names in 19 and 34
+select name from employeeinfo where age between 1 and 19; 
+select name from employeeinfo where age not between 1 and 19;
+select name from employeeinfo where location like 'm%'; // starts with m
+select name from employeeinfo where location like '-m%';//get records whose second letter match with m
+

@@ -1,0 +1,92 @@
+To Run TestnG xml file from terminal:(maven help)
+install apache maven and configure it in enviromnmental variables.
+set maven compiler to 11(for mine its java 11)or source target method 1.8(refer project)
+1.add maven surefire plugin to pom.xml (if you add your test in maven plugin itself)->it will run that particular test
+or else if u want to run your profiles specific you need to create a profile in pom.xml (refer selenium framework project)
+2. go to the project path in terminal or cmd:
+cmd-> mvn test (run that specific plugin test)
+cmd->mvn test -P(profilename)->run that specific profile in pom.xml
+cmd->mvn test -P(profilename) -Dbrowser=chrome(giving chrome options from system property)note:we can give headless also (refer project-> set size if it's headless)
+
+Jenkins download:
+1.download generic java war package(see requirements in page)
+2.go to jenkins download directory in cmd(C:\Users\SEDHU\Jenkins):
+cmd->java -jar jenkins.war --httpPort=8080 (we can change the port)
+once it ran go to -> http://localhost:8080 
+->enter credentials mine(
+username:SEDHUV
+PW:Sedhu@14
+SEDHU ->NAME)
+creating new job in jenkins:
+->create a new item ->freestyle->our code is in local system so select advanced->use custom workspace->give project path->go to Build-> add maven targets-> give cmd what you gave in terminal(no need to give mvn as it is already maven) e.g: test -p(profilename)
+
+parameterize chrome and profile :
+1. go to configure
+2. go to this project is parametrized->select->add parameter->choice parameter
+3.give the name what u want in choice
+e.g: in name-> browsername
+in choices -> give all the options(chrome,firefox,edge)
+same for profile
+
+in cmd->test -P"$profile" -Dbrowser="$browsername"
+
+
+CI/CD:
+
+photo attached in rahulshetty folder
+1.push code to github
+2.in github-> webhook will trigger and it will trigger jenkins job .
+
+setting github:
+github credentials:
+Vanitha@1413->password sedhuraina968@gmail.com -> github
+Username - SEDHUV
+go to project directory which u want to push in cmd
+in cmd 
+ go to project path 
+git init(create connection local and remote repository)
+git checkout -b main (create a new branch)
+git status (check status)
+git add .
+git commit -m "commit"
+git remote add origin (github path)
+git push origin main(if asked give credentials)
+
+Jenkins settings: add plugins it will when u install jenkins
+by default maven plugin will not be there you need to go to manage plugins and availabe plugins -> search maven integration -> install(if u face sunsecurity issue go to system in manage plugins ->go to url change https to http)
+1.whenever u add plugins restart jenkins in cmd
+2.create a new item as maven project (bcoz it is remote repository we don't have any connection with local need to install maven also like in above step)
+3.source code management->git->give git address->
+4.in credentials->add->kind->secret text
+for secret text:
+go to github->go to account->settings->developer settings->personal access tokens -> tokens (classic)->generate a new token->generate new token(classic)->select all permissions-> give note name ->generate token->secret text will create(mine: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) ->copy that
+
+5.paste secret code in jenkins secret
+6.give random id and decription->add
+7.branch -> */main(I pushed to main branch in github)
+8.build triggers-> check github hook trigger for GITSCm polling option->it will ask you to give maven path it's ok ->save
+9.manage jenkins->tools->add maven -> uncheck install automatically(as i have already maven in system)-> 
+give version(3.9.5) in name option->
+maven home->C:\Users\SEDHU\Downloads\apache-maven-3.9.5-bin\apache-maven-3.9.5
+
+->save
+
+go to job->configure
+in goals and options->give the cmd: test -P(PROFILENAME)
+run test -> it will download code from github and run according what you gave in goals and options.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

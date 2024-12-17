@@ -1,0 +1,6 @@
+Selenium grid architecture explain diagram
+componenets of selenium hub :
+1.client(our machine) send the code to router
+2.router receives first tym response from client and it sends to distributor(it reads the code and knows in which machine it needs to send)and distributor sends to physical machine(node)
+4.also distributor sends session id(test name) and node url(machine no) details to session and it is shared to router
+5.in single test .client sends first list of code and it got distributed and router got session id right so hereafter in a single test if router receives any new code it will check the session information which it received and it knows where to send the code so it will send without sending to distributor.

@@ -1,0 +1,485 @@
+t Windows [Version 10.0.22621.3593]
+(c) Microsoft Corporation. All rights reserved.
+
+C:\Users\SEDHU>git config --global user.name "SEDHUV"
+
+C:\Users\SEDHU>git config --global user.email "sedhuraina968@gmail.com"
+
+C:\Users\SEDHU> cd Gitstuff
+
+C:\Users\SEDHU\Gitstuff>git init
+Initialized empty Git repository in C:/Users/SEDHU/Gitstuff/.git/
+
+C:\Users\SEDHU\Gitstuff>git add *
+
+C:\Users\SEDHU\Gitstuff>git status
+On branch master
+
+No commits yet
+
+Changes to be committed:
+  (use "git rm --cached <file>..." to unstage)
+        new file:   .classpath
+        new file:   .idea/.gitignore
+        new file:   .idea/misc.xml
+        new file:   .project
+        new file:   .settings/org.eclipse.core.resources.prefs
+        new file:   .settings/org.eclipse.jdt.core.prefs
+        new file:   bin/Demo/dropdown.class
+        new file:   bin/Demo/new1.class
+        new file:   bin/Demo/orangehrm_dropdown_java.class
+        new file:   bin/Test.class
+        new file:   bin/youtube.class
+        new file:   src/Demo/dropdown.java
+        new file:   src/Demo/new1.java
+        new file:   src/Demo/orangehrm_dropdown_java.java
+        new file:   src/Test.java
+        new file:   src/youtube.java
+
+
+C:\Users\SEDHU\Gitstuff>git commit -m "Commit message"
+[master (root-commit) c2beb10] Commit message
+ 16 files changed, 273 insertions(+)
+ create mode 100644 .classpath
+ create mode 100644 .idea/.gitignore
+ create mode 100644 .idea/misc.xml
+ create mode 100644 .project
+ create mode 100644 .settings/org.eclipse.core.resources.prefs
+ create mode 100644 .settings/org.eclipse.jdt.core.prefs
+ create mode 100644 bin/Demo/dropdown.class
+ create mode 100644 bin/Demo/new1.class
+ create mode 100644 bin/Demo/orangehrm_dropdown_java.class
+ create mode 100644 bin/Test.class
+ create mode 100644 bin/youtube.class
+ create mode 100644 src/Demo/dropdown.java
+ create mode 100644 src/Demo/new1.java
+ create mode 100644 src/Demo/orangehrm_dropdown_java.java
+ create mode 100644 src/Test.java
+ create mode 100644 src/youtube.java
+
+C:\Users\SEDHU\Gitstuff>git remote add origin https://github.com/SEDHUV/Gitdemo.git
+
+C:\Users\SEDHU\Gitstuff>git push origin master
+info: please complete authentication in your browser...
+Enumerating objects: 24, done.
+Counting objects: 100% (24/24), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (23/23), done.
+Writing objects: 100% (24/24), 9.87 KiB | 505.00 KiB/s, done.
+Total 24 (delta 5), reused 0 (delta 0), pack-reused 0 (from 0)
+remote: Resolving deltas: 100% (5/5), done.
+To https://github.com/SEDHUV/Gitdemo.git
+ * [new branch]      master -> master
+
+C:\Users\SEDHU\Gitstuff>cd..
+
+C:\Users\SEDHU>git clone https://github.com/SEDHUV/Gitdemo.git
+Cloning into 'Gitdemo'...
+remote: Enumerating objects: 24, done.
+remote: Counting objects: 100% (24/24), done.
+remote: Compressing objects: 100% (18/18), done.
+remote: Total 24 (delta 5), reused 24 (delta 5), pack-reused 0
+Receiving objects: 100% (24/24), 9.87 KiB | 1010.00 KiB/s, done.
+Resolving deltas: 100% (5/5), done.
+
+C:\Users\SEDHU>cd C:\Users\SEDHU\Gitdemo
+
+C:\Users\SEDHU\Gitdemo>git add *
+
+C:\Users\SEDHU\Gitdemo>git status
+On branch master
+Your branch is up to date with 'origin/master'.
+
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        new file:   .idea/Gitdemo.iml
+        new file:   .idea/modules.xml
+        new file:   .idea/vcs.xml
+        modified:   .project
+        modified:   src/Demo/dropdown.java
+        deleted:    src/youtube.java
+
+
+C:\Users\SEDHU\Gitdemo>git commit -m "this is sedhu"
+[master 3908655] this is sedhu
+ 6 files changed, 26 insertions(+), 37 deletions(-)
+ create mode 100644 .idea/Gitdemo.iml
+ create mode 100644 .idea/modules.xml
+ create mode 100644 .idea/vcs.xml
+ delete mode 100644 src/youtube.java
+
+C:\Users\SEDHU\Gitdemo>push add origin master
+'push' is not recognized as an internal or external command,
+operable program or batch file.
+
+C:\Users\SEDHU\Gitdemo>git push origin master
+Enumerating objects: 16, done.
+Counting objects: 100% (16/16), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (10/10), done.
+Writing objects: 100% (10/10), 1.38 KiB | 282.00 KiB/s, done.
+Total 10 (delta 2), reused 0 (delta 0), pack-reused 0 (from 0)
+remote: Resolving deltas: 100% (2/2), completed with 2 local objects.
+To https://github.com/SEDHUV/Gitdemo.git
+   c2beb10..3908655  master -> master
+
+C:\Users\SEDHU\Gitdemo>cd C:\Users\SEDHU\Gitstuff
+
+C:\Users\SEDHU\Gitstuff>git pull origin master
+remote: Enumerating objects: 16, done.
+remote: Counting objects: 100% (16/16), done.
+remote: Compressing objects: 100% (8/8), done.
+remote: Total 10 (delta 2), reused 10 (delta 2), pack-reused 0
+Unpacking objects: 100% (10/10), 1.36 KiB | 16.00 KiB/s, done.
+From https://github.com/SEDHUV/Gitdemo
+ * branch            master     -> FETCH_HEAD
+   c2beb10..3908655  master     -> origin/master
+Updating c2beb10..3908655
+error: Your local changes to the following files would be overwritten by merge:
+        .project
+Please commit your changes or stash them before you merge.
+Aborting
+
+C:\Users\SEDHU\Gitstuff>git pull origin master
+From https://github.com/SEDHUV/Gitdemo
+ * branch            master     -> FETCH_HEAD
+Updating c2beb10..3908655
+error: Your local changes to the following files would be overwritten by merge:
+        .project
+Please commit your changes or stash them before you merge.
+Aborting
+
+C:\Users\SEDHU\Gitstuff>git stash
+Saved working directory and index state WIP on master: c2beb10 Commit message
+
+C:\Users\SEDHU\Gitstuff>git pull origin master
+From https://github.com/SEDHUV/Gitdemo
+ * branch            master     -> FETCH_HEAD
+Updating c2beb10..3908655
+Fast-forward
+ .idea/Gitdemo.iml      | 11 +++++++++++
+ .idea/modules.xml      |  8 ++++++++
+ .idea/vcs.xml          |  6 ++++++
+ .project               |  2 +-
+ src/Demo/dropdown.java |  1 -
+ src/youtube.java       | 35 -----------------------------------
+ 6 files changed, 26 insertions(+), 37 deletions(-)
+ create mode 100644 .idea/Gitdemo.iml
+ create mode 100644 .idea/modules.xml
+ create mode 100644 .idea/vcs.xml
+ delete mode 100644 src/youtube.java
+
+C:\Users\SEDHU\Gitstuff>git status
+On branch master
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   bin/Demo/dropdown.class
+        modified:   src/Demo/dropdown.java
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        bin/.gitignore
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+C:\Users\SEDHU\Gitstuff>git add *
+warning: in the working copy of 'bin/.gitignore', LF will be replaced by CRLF the next time Git touches it
+
+C:\Users\SEDHU\Gitstuff>git commit -m "sedhu"
+[master dd719c4] sedhu
+ 3 files changed, 2 insertions(+)
+ create mode 100644 bin/.gitignore
+
+C:\Users\SEDHU\Gitstuff>git push origin master
+Enumerating objects: 16, done.
+Counting objects: 100% (16/16), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (8/8), done.
+Writing objects: 100% (9/9), 1.06 KiB | 154.00 KiB/s, done.
+Total 9 (delta 3), reused 0 (delta 0), pack-reused 0 (from 0)
+remote: Resolving deltas: 100% (3/3), completed with 3 local objects.
+To https://github.com/SEDHUV/Gitdemo.git
+   3908655..dd719c4  master -> master
+
+C:\Users\SEDHU\Gitstuff>cd C:\Users\SEDHU\Gitdemo
+
+C:\Users\SEDHU\Gitdemo>git pull origin master
+remote: Enumerating objects: 16, done.
+remote: Counting objects: 100% (16/16), done.
+remote: Compressing objects: 100% (5/5), done.
+remote: Total 9 (delta 3), reused 9 (delta 3), pack-reused 0
+Unpacking objects: 100% (9/9), 1.04 KiB | 14.00 KiB/s, done.
+From https://github.com/SEDHUV/Gitdemo
+ * branch            master     -> FETCH_HEAD
+   3908655..dd719c4  master     -> origin/master
+Updating 3908655..dd719c4
+Fast-forward
+ bin/.gitignore          |   1 +
+ bin/Demo/dropdown.class | Bin 2557 -> 2527 bytes
+ src/Demo/dropdown.java  |   1 +
+ 3 files changed, 2 insertions(+)
+ create mode 100644 bin/.gitignore
+
+C:\Users\SEDHU\Gitdemo>git branch -b develop
+error: unknown switch `b'
+usage: git branch [<options>] [-r | -a] [--merged] [--no-merged]
+   or: git branch [<options>] [-f] [--recurse-submodules] <branch-name> [<start-point>]
+   or: git branch [<options>] [-l] [<pattern>...]
+   or: git branch [<options>] [-r] (-d | -D) <branch-name>...
+   or: git branch [<options>] (-m | -M) [<old-branch>] <new-branch>
+   or: git branch [<options>] (-c | -C) [<old-branch>] <new-branch>
+   or: git branch [<options>] [-r | -a] [--points-at]
+   or: git branch [<options>] [-r | -a] [--format]
+
+Generic options
+    -v, --[no-]verbose    show hash and subject, give twice for upstream branch
+    -q, --[no-]quiet      suppress informational messages
+    -t, --[no-]track[=(direct|inherit)]
+                          set branch tracking configuration
+    -u, --[no-]set-upstream-to <upstream>
+                          change the upstream info
+    --[no-]unset-upstream unset the upstream info
+    --[no-]color[=<when>] use colored output
+    -r, --remotes         act on remote-tracking branches
+    --contains <commit>   print only branches that contain the commit
+    --no-contains <commit>
+                          print only branches that don't contain the commit
+    --[no-]abbrev[=<n>]   use <n> digits to display object names
+
+Specific git-branch actions:
+    -a, --all             list both remote-tracking and local branches
+    -d, --[no-]delete     delete fully merged branch
+    -D                    delete branch (even if not merged)
+    -m, --[no-]move       move/rename a branch and its reflog
+    -M                    move/rename a branch, even if target exists
+    --[no-]omit-empty     do not output a newline after empty formatted refs
+    -c, --[no-]copy       copy a branch and its reflog
+    -C                    copy a branch, even if target exists
+    -l, --[no-]list       list branch names
+    --[no-]show-current   show current branch name
+    --[no-]create-reflog  create the branch's reflog
+    --[no-]edit-description
+                          edit the description for the branch
+    -f, --[no-]force      force creation, move/rename, deletion
+    --merged <commit>     print only branches that are merged
+    --no-merged <commit>  print only branches that are not merged
+    --[no-]column[=<style>]
+                          list branches in columns
+    --[no-]sort <key>     field name to sort on
+    --[no-]points-at <object>
+                          print only branches of the object
+    -i, --[no-]ignore-case
+                          sorting and filtering are case insensitive
+    --[no-]recurse-submodules
+                          recurse through submodules
+    --[no-]format <format>
+                          format to use for the output
+
+
+C:\Users\SEDHU\Gitdemo>git checkout -b develop
+Switched to a new branch 'develop'
+
+C:\Users\SEDHU\Gitdemo>git branch
+* develop
+  master
+
+C:\Users\SEDHU\Gitdemo>git add *
+
+C:\Users\SEDHU\Gitdemo>git status
+On branch develop
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        modified:   src/Demo/dropdown.java
+
+
+C:\Users\SEDHU\Gitdemo>git commit -m "architect"
+[develop cb9a84d] architect
+ 1 file changed, 1 insertion(+)
+
+C:\Users\SEDHU\Gitdemo>git push origin develop
+Enumerating objects: 9, done.
+Counting objects: 100% (9/9), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (5/5), done.
+Writing objects: 100% (5/5), 516 bytes | 103.00 KiB/s, done.
+Total 5 (delta 2), reused 0 (delta 0), pack-reused 0 (from 0)
+remote: Resolving deltas: 100% (2/2), completed with 2 local objects.
+remote:
+remote: Create a pull request for 'develop' on GitHub by visiting:
+remote:      https://github.com/SEDHUV/Gitdemo/pull/new/develop
+remote:
+To https://github.com/SEDHUV/Gitdemo.git
+ * [new branch]      develop -> develop
+
+C:\Users\SEDHU\Gitdemo>cd C:\Users\SEDHU\Gitstuff
+
+C:\Users\SEDHU\Gitstuff>git pull origin develop
+remote: Enumerating objects: 9, done.
+remote: Counting objects: 100% (9/9), done.
+remote: Compressing objects: 100% (3/3), done.
+remote: Total 5 (delta 2), reused 5 (delta 2), pack-reused 0
+Unpacking objects: 100% (5/5), 496 bytes | 13.00 KiB/s, done.
+From https://github.com/SEDHUV/Gitdemo
+ * branch            develop    -> FETCH_HEAD
+ * [new branch]      develop    -> origin/develop
+Updating dd719c4..cb9a84d
+Fast-forward
+ src/Demo/dropdown.java | 1 +
+ 1 file changed, 1 insertion(+)
+
+C:\Users\SEDHU\Gitstuff>git checkout develop
+M       bin/Demo/dropdown.class
+branch 'develop' set up to track 'origin/develop'.
+Switched to a new branch 'develop'
+
+C:\Users\SEDHU\Gitstuff>git add *
+
+C:\Users\SEDHU\Gitstuff>git status
+On branch develop
+Your branch is up to date with 'origin/develop'.
+
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        modified:   bin/Demo/dropdown.class
+        modified:   src/Demo/dropdown.java
+
+
+C:\Users\SEDHU\Gitstuff>git commit -m "haema"
+[develop b70e219] haema
+ 2 files changed, 1 insertion(+)
+
+C:\Users\SEDHU\Gitstuff>git push origin develop
+Enumerating objects: 15, done.
+Counting objects: 100% (15/15), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (8/8), done.
+Writing objects: 100% (8/8), 956 bytes | 159.00 KiB/s, done.
+Total 8 (delta 4), reused 0 (delta 0), pack-reused 0 (from 0)
+remote: Resolving deltas: 100% (4/4), completed with 4 local objects.
+To https://github.com/SEDHUV/Gitdemo.git
+   cb9a84d..b70e219  develop -> develop
+
+C:\Users\SEDHU\Gitstuff>cd C:\Users\SEDHU\Gitdemo
+
+C:\Users\SEDHU\Gitdemo>git pull origin develop
+remote: Enumerating objects: 15, done.
+remote: Counting objects: 100% (15/15), done.
+remote: Compressing objects: 100% (4/4), done.
+remote: Total 8 (delta 4), reused 8 (delta 4), pack-reused 0
+Unpacking objects: 100% (8/8), 936 bytes | 17.00 KiB/s, done.
+From https://github.com/SEDHUV/Gitdemo
+ * branch            develop    -> FETCH_HEAD
+   cb9a84d..b70e219  develop    -> origin/develop
+Updating cb9a84d..b70e219
+Fast-forward
+ bin/Demo/dropdown.class | Bin 2527 -> 2578 bytes
+ src/Demo/dropdown.java  |   1 +
+ 2 files changed, 1 insertion(+)
+
+C:\Users\SEDHU\Gitdemo>cd C:\Users\SEDHU\Gitstuff
+
+C:\Users\SEDHU\Gitstuff>git checkout master
+Switched to branch 'master'
+
+C:\Users\SEDHU\Gitstuff>git branch
+  develop
+* master
+
+C:\Users\SEDHU\Gitstuff> git pull origin master
+From https://github.com/SEDHUV/Gitdemo
+ * branch            master     -> FETCH_HEAD
+Already up to date.
+
+C:\Users\SEDHU\Gitstuff>git merge develop
+Updating cb9a84d..b70e219
+error: Your local changes to the following files would be overwritten by merge:
+        bin/Demo/dropdown.class
+Please commit your changes or stash them before you merge.
+Aborting
+
+C:\Users\SEDHU\Gitstuff>git add *
+
+C:\Users\SEDHU\Gitstuff>git merge develop
+Updating cb9a84d..b70e219
+error: Your local changes to the following files would be overwritten by merge:
+        bin/Demo/dropdown.class
+Please commit your changes or stash them before you merge.
+Aborting
+
+C:\Users\SEDHU\Gitstuff>git stash
+Saved working directory and index state WIP on master: cb9a84d architect
+
+C:\Users\SEDHU\Gitstuff>git merge develop
+Updating cb9a84d..b70e219
+Fast-forward
+ bin/Demo/dropdown.class | Bin 2527 -> 2578 bytes
+ src/Demo/dropdown.java  |   1 +
+ 2 files changed, 1 insertion(+)
+
+C:\Users\SEDHU\Gitstuff>cd C:\Users\SEDHU\Gitdemo
+
+C:\Users\SEDHU\Gitdemo>git checkout master
+Switched to branch 'master'
+Your branch is up to date with 'origin/master'.
+
+C:\Users\SEDHU\Gitdemo>git branch
+  develop
+* master
+
+C:\Users\SEDHU\Gitdemo>git pull origin master
+From https://github.com/SEDHUV/Gitdemo
+ * branch            master     -> FETCH_HEAD
+Already up to date.
+
+C:\Users\SEDHU\Gitdemo>cd C:\Users\SEDHU\Gitstuff
+
+C:\Users\SEDHU\Gitstuff>git add *
+
+C:\Users\SEDHU\Gitstuff>git status
+On branch master
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        new file:   src/Demo/summa.java
+
+
+C:\Users\SEDHU\Gitstuff>git commit -m "new class"
+[master 85f74fc] new class
+ 1 file changed, 5 insertions(+)
+ create mode 100644 src/Demo/summa.java
+
+C:\Users\SEDHU\Gitstuff>git push origin master
+Enumerating objects: 8, done.
+Counting objects: 100% (8/8), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (4/4), done.
+Writing objects: 100% (5/5), 452 bytes | 150.00 KiB/s, done.
+Total 5 (delta 2), reused 0 (delta 0), pack-reused 0 (from 0)
+remote: Resolving deltas: 100% (2/2), completed with 2 local objects.
+To https://github.com/SEDHUV/Gitdemo.git
+   dd719c4..85f74fc  master -> master
+
+C:\Users\SEDHU\Gitstuff>cd C:\Users\SEDHU\Gitdemo
+
+C:\Users\SEDHU\Gitdemo>git branch
+  develop
+* master
+
+C:\Users\SEDHU\Gitdemo>git pull origin master
+remote: Enumerating objects: 8, done.
+remote: Counting objects: 100% (8/8), done.
+remote: Compressing objects: 100% (2/2), done.
+remote: Total 5 (delta 2), reused 5 (delta 2), pack-reused 0
+Unpacking objects: 100% (5/5), 432 bytes | 11.00 KiB/s, done.
+From https://github.com/SEDHUV/Gitdemo
+ * branch            master     -> FETCH_HEAD
+   dd719c4..85f74fc  master     -> origin/master
+Updating dd719c4..85f74fc
+Fast-forward
+ bin/Demo/dropdown.class | Bin 2527 -> 2578 bytes
+ src/Demo/dropdown.java  |   2 ++
+ src/Demo/summa.java     |   5 +++++
+ 3 files changed, 7 insertions(+)
+ create mode 100644 src/Demo/summa.java
+
+C:\Users\SEDHU\Gitdemo>
